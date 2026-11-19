@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 Safe Additive-Only Skill Installer for Akasha v9.0
-Copies the 8 v9.0 exclusive skills (including scripts/) to ~/.workbuddy/skills/.
+Copies the 9 v9.2 exclusive skills (including scripts/) to ~/.workbuddy/skills/.
 Pass --update-v9 to overwrite existing copies of these 8 skills only.
 """
 import shutil
@@ -11,6 +11,7 @@ from pathlib import Path
 
 V9_EXCLUSIVE_SKILLS = [
     "aoci-cognition",
+    "git-worktree-isolation",
     "docx-delivery-reporter",
     "trellis-workflow",
     "matt-2026-suite",

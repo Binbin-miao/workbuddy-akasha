@@ -1,15 +1,16 @@
 ---
 name: self-improving-agent
-description: 双层作用域隔离记忆与自进化协议（v9.1）：跨会话沉淀用户偏好（含自然人话前台交流、AOCI 直读、深度对齐、单轮终审与自动 Word 交付），强制限容、去重覆盖与零 PII 脱敏。
+description: 双层作用域隔离记忆与自进化协议（v9.2）：跨会话沉淀用户偏好（含自然人话前台交流、AOCI 直读、深度对齐、单轮终审与自动 Word 交付），强制限容、去重覆盖与零 PII 脱敏。
 ---
 
-# Self-Improving Agent Memory Protocol (v9.1)
+# Self-Improving Agent Memory Protocol (v9.2)
 
 ## 1. TWO-TIER SCOPED STORAGE
 1. **Project Ledger (`.learnings/USER_RULES.md` & `.learnings/SESSION_JOURNAL.md`)**:
    - Stores repository-specific AOCI invariants, exact build/test/QA commands, UI tab rules, and retro lessons (hidden via `.git/info/exclude`).
 2. **Global Profile (`~/.workbuddy/memory/user-coding-profile.md`)**:
    - Stores ONLY universal cross-project preferences:
+     * **Codex-Style Git Worktree Isolation**: Always edit/test/audit inside an isolated sibling worktree (`akasha/<slug>`) so main workspace stays clean, then let the user choose Apply-Patch / Squash-Merge / Keep / Cleanup.
      * **Natural Frontstage Chat**: Lead communicates like a normal, warm, clear AI collaborator—zero internal phase codes, zero SOP jargon, zero robotic emoji templates, and zero unnecessary walls of text.
      * Dedicated AOCI Cartographer (`艾尔海森`) updates machine-readable `aoci.code.txt` first; all other agents read it directly instead of blind repo scans.
      * Thorough yet conversational 6-dimension `AskUserQuestion` alignment before coding (plain language, recommended defaults, fast-pass option).

@@ -1,8 +1,8 @@
 {
   "name": "akasha",
   "expertType": "team",
-  "version": "9.1.0",
-  "description": "Akasha (虚空) v9.1 — Natural Frontstage AI Conversation + Rigorous Backstage 7-Agent Engineering: dedicated AOCI v0.2 cartographer, conversational 6D deep grilling, deterministic-first + single-pass audit, runtime QA, and automatic Word (.docx) delivery reports.",
+  "version": "9.2.0",
+  "description": "Akasha (虚空) v9.2 — Natural Frontstage AI Chat + Codex-Style Git Worktree Isolation + Dedicated AOCI v0.2 Cartographer, Conversational 6D Grilling, Single-Pass Diff Audit, Runtime QA, and Automatic Word (.docx) Delivery Reports.",
   "author": {
     "name": "Binbin-miao",
     "email": "binbin-miao@users.noreply.github.com"
@@ -31,6 +31,7 @@
   "skills": [
     "./skills/aoci-cognition",
     "./skills/docx-delivery-reporter",
+    "./skills/git-worktree-isolation",
     "./skills/trellis-workflow",
     "./skills/matt-2026-suite",
     "./skills/prompt-optimizer-dispatch",
@@ -47,8 +48,8 @@
     "zh": "虚空"
   },
   "displayDescription": {
-    "en": "v9.1 Natural-chat 7-agent team: smooth human-like Lead conversation, dedicated AOCI machine index, deep grilling, single-pass audit, and auto Word (.docx) reports.",
-    "zh": "自然顺手对话体验 + 七人幕后协同：告别冰冷流程黑话，专职AOCI机器索引省Token、深度温和对齐需求、单轮终审与自动Word交付。"
+    "en": "v9.2 Natural-chat 7-agent team with Codex-style Git Worktree isolation, dedicated AOCI index, deep grilling, single-pass audit, and auto Word (.docx) reports.",
+    "zh": "自然对话体验 + Codex 风格独立 Worktree 隔离开发：主工作区零污染、专职 AOCI 索引省 Token、深度温和对齐、单轮终审与自动 Word 交付。"
   },
   "avatar": "avatars/team.png",
   "categoryId": "02-Engineering",
@@ -59,12 +60,12 @@
   "plugin": "akasha",
   "tags": [
     {
-      "en": "Dedicated AOCI Cartographer",
-      "zh": "专职AOCI机器索引"
+      "en": "Codex-Style Worktree",
+      "zh": "独立Worktree隔离"
     },
     {
-      "en": "Deep Grilling & Zero Loops",
-      "zh": "深度审讯与单轮省Token"
+      "en": "Dedicated AOCI Index",
+      "zh": "专职AOCI机器索引"
     },
     {
       "en": "Auto Word (.docx) Report",

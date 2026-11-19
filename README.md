@@ -1,26 +1,39 @@
-# 虚空 (Akasha) v9.1.0 — WorkBuddy 七人研发专家团
+# 虚空 (Akasha) v9.2.0 — WorkBuddy 七人研发专家团
 
-前台像日常 AI 助手一样自然对话，后台自动跑完整工程闭环：需求对齐、Spec 落盘、TDD 实现、独立终审、Word 交付报告。
+前台像日常 AI 助手一样自然对话，后台自动跑完整工程闭环：需求对齐、Spec 落盘、独立 Worktree 隔离开发、TDD 实现、单轮终审、Word 交付报告。
 
-面向 **WorkBuddy / CodeBuddy** 的专家团队插件，共 **7 位角色 + 8 项内置技能**。
+面向 **WorkBuddy / CodeBuddy** 的专家团队插件，共 **7 位角色 + 9 项内置技能**。
+
+## 核心机制：独立 Worktree 隔离开发（v9.2 新增）
+
+要动代码时，先在你的仓库**同级目录**开出独立副本（`<parent>/.akasha-worktrees/<repo>/<slug>`，分支 `akasha/<slug>`），编码、测试、运行时验证全在副本里做，**你当前的工作区一行都不会被改**。
+
+改完由派蒙用大白话给你四种落地方式：
+
+- 打补丁到当前工作区（`apply-patch`，最像 Codex 的用法）
+- 压缩合并成一个提交（`squash-merge`）
+- 普通合并（`merge`）
+- 先留着不动（`keep`）
+
+不满意可以一键 `cleanup` 清掉副本；非 Git 目录会自动降级，不报错。
 
 ## 阵容
 
 | 角色 | Agent ID | 职责 |
 | --- | --- | --- |
-| 派蒙 | `akasha-team-lead` | 主理人：需求对齐、任务调度、收尾汇总 |
+| 派蒙 | `akasha-team-lead` | 主理人：需求对齐、任务调度、Worktree 落地方式选择、收尾汇总 |
 | 艾尔海森 | `aoci-codebase-cartographer` | 代码库测绘：生成标准机器索引，其余成员直读免盲扫 |
 | 纳西妲 | `domain-grilling-architect` | 架构分析、Spec 与工单建模、并发不变量 |
-| 可莉 | `deep-module-tdd-engineer` | TDD 实现、编译与端到端门禁实跑 |
+| 可莉 | `deep-module-tdd-engineer` | TDD 实现、编译与端到端门禁实跑（全程在隔离副本内） |
 | 心海 | `impeccable-design-director` | 界面审美、交互状态完备性、多视口走查 |
-| 希格雯 | `ponytail-simplicity-gatekeeper` | 代码精简、单轮 Diff 终审、本地事件泄漏拦截 |
+| 希格雯 | `ponytail-simplicity-gatekeeper` | 代码精简、单轮 Diff 终审（只审副本改动）、本地事件泄漏拦截 |
 | 早柚 | `scrapling-web-intelligence` | 开源先例检索、反爬网页情报 |
 
-## 内置技能 (8)
+## 内置技能 (9)
 
-`aoci-cognition` · `docx-delivery-reporter` · `trellis-workflow` · `matt-2026-suite` · `prompt-optimizer-dispatch` · `self-improving-agent` · `clean-code-and-commit-guard` · `modern-web-guidance`
+`git-worktree-isolation` · `aoci-cognition` · `docx-delivery-reporter` · `trellis-workflow` · `matt-2026-suite` · `prompt-optimizer-dispatch` · `self-improving-agent` · `clean-code-and-commit-guard` · `modern-web-guidance`
 
-其中 `aoci-cognition` 与 `docx-delivery-reporter` 自带 Python 脚本（代码库预扫、Word 报告生成）。
+其中 `aoci-cognition`、`docx-delivery-reporter`、`git-worktree-isolation` 自带 Python 脚本（代码库预扫、Word 报告生成、Worktree 管理）。
 
 ## 安装
 
@@ -47,7 +60,7 @@ AI 会放到专家目录、补齐校验并完成注册。
 python akasha/sync_v9_skills_safe.py
 ```
 
-该脚本采用白名单，只处理上列 8 个技能，不会改动你本机其他技能。
+该脚本采用白名单，只处理上列 9 个技能，不会改动你本机其他技能。
 
 ## 依赖
 
@@ -66,7 +79,7 @@ akasha/
 ├── .codebuddy-plugin/plugin.json   # 插件元信息
 ├── agents/                         # 7 位角色定义
 ├── avatars/                        # 8 张头像
-├── skills/                         # 8 项内置技能
+├── skills/                         # 9 项内置技能
 ├── settings.json                   # 主理人指定
 └── sync_v9_skills_safe.py          # 技能同步脚本（可选）
 ```
