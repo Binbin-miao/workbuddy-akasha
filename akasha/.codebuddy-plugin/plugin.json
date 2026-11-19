@@ -1,0 +1,209 @@
+{
+  "name": "akasha",
+  "expertType": "team",
+  "version": "9.1.0",
+  "description": "Akasha (虚空) v9.1 — Natural Frontstage AI Conversation + Rigorous Backstage 7-Agent Engineering: dedicated AOCI v0.2 cartographer, conversational 6D deep grilling, deterministic-first + single-pass audit, runtime QA, and automatic Word (.docx) delivery reports.",
+  "author": {
+    "name": "Binbin-miao",
+    "email": "binbin-miao@users.noreply.github.com"
+  },
+  "agents": [
+    "./agents/akasha-team-lead.md",
+    "./agents/aoci-codebase-cartographer.md",
+    "./agents/domain-grilling-architect.md",
+    "./agents/deep-module-tdd-engineer.md",
+    "./agents/impeccable-design-director.md",
+    "./agents/ponytail-simplicity-gatekeeper.md",
+    "./agents/scrapling-web-intelligence.md"
+  ],
+  "agentName": "akasha-team-lead",
+  "teamInfo": {
+    "leadAgent": "akasha-team-lead",
+    "memberAgents": [
+      "aoci-codebase-cartographer",
+      "domain-grilling-architect",
+      "deep-module-tdd-engineer",
+      "impeccable-design-director",
+      "ponytail-simplicity-gatekeeper",
+      "scrapling-web-intelligence"
+    ]
+  },
+  "skills": [
+    "./skills/aoci-cognition",
+    "./skills/docx-delivery-reporter",
+    "./skills/trellis-workflow",
+    "./skills/matt-2026-suite",
+    "./skills/prompt-optimizer-dispatch",
+    "./skills/self-improving-agent",
+    "./skills/clean-code-and-commit-guard",
+    "./skills/modern-web-guidance"
+  ],
+  "displayName": {
+    "en": "Akasha",
+    "zh": "虚空"
+  },
+  "profession": {
+    "en": "Akasha",
+    "zh": "虚空"
+  },
+  "displayDescription": {
+    "en": "v9.1 Natural-chat 7-agent team: smooth human-like Lead conversation, dedicated AOCI machine index, deep grilling, single-pass audit, and auto Word (.docx) reports.",
+    "zh": "自然顺手对话体验 + 七人幕后协同：告别冰冷流程黑话，专职AOCI机器索引省Token、深度温和对齐需求、单轮终审与自动Word交付。"
+  },
+  "avatar": "avatars/team.png",
+  "categoryId": "02-Engineering",
+  "defaultInitPrompt": {
+    "en": "I want to build or improve: {describe goal}. Take a look at the project first, chat through any key details with me, then get it done cleanly with a Word summary.",
+    "zh": "我想做或优化这个需求：{输入需求}。你先帮我摸清项目情况，把关键细节和我聊清楚再动手，做完附一份 Word 说明文档。"
+  },
+  "plugin": "akasha",
+  "tags": [
+    {
+      "en": "Dedicated AOCI Cartographer",
+      "zh": "专职AOCI机器索引"
+    },
+    {
+      "en": "Deep Grilling & Zero Loops",
+      "zh": "深度审讯与单轮省Token"
+    },
+    {
+      "en": "Auto Word (.docx) Report",
+      "zh": "自动Word报告交付"
+    }
+  ],
+  "quickPrompts": [
+    {
+      "en": "I want to build or improve: {describe goal}. Explore the project first, align key details with me naturally, then implement, verify, and deliver a Word (.docx) summary.",
+      "zh": "我想开发或优化：{输入需求}。先摸清项目底子，把关键细节和我对齐后再实现并实测，完成后给我一份 Word 进度说明。"
+    },
+    {
+      "en": "Please scan this project and build or refresh the AOCI machine-readable index so future tasks run faster with fewer tokens.",
+      "zh": "帮我把当前项目整体梳理一遍，生成或刷新 AOCI 机器索引文件，方便后面干活更省 Token。"
+    },
+    {
+      "en": "Help me investigate and fix this issue: {describe issue}. Find the root cause first, confirm any edge cases with me, then fix, verify, and deliver a Word (.docx) summary.",
+      "zh": "帮我排查并修复这个问题：{输入问题}。先定位根因，有需要拍板的细节先问我，修好实测后给我一份 Word 说明文档。"
+    }
+  ],
+  "members": [
+    {
+      "id": "akasha-team-lead",
+      "name": {
+        "en": "Paimon",
+        "zh": "派蒙"
+      },
+      "displayName": {
+        "en": "Paimon",
+        "zh": "派蒙"
+      },
+      "profession": {
+        "en": "Natural-Chat Chief Orchestrator",
+        "zh": "首席对话与协作主理人"
+      },
+      "avatar": "avatars/akasha-team-lead.png",
+      "role": "lead"
+    },
+    {
+      "id": "aoci-codebase-cartographer",
+      "name": {
+        "en": "Alhaitham",
+        "zh": "艾尔海森"
+      },
+      "displayName": {
+        "en": "Alhaitham",
+        "zh": "艾尔海森"
+      },
+      "profession": {
+        "en": "AOCI Machine-Cognition Cartographer",
+        "zh": "AOCI全域测绘书记官"
+      },
+      "avatar": "avatars/aoci-codebase-cartographer.png",
+      "role": "member"
+    },
+    {
+      "id": "domain-grilling-architect",
+      "name": {
+        "en": "Nahida",
+        "zh": "纳西妲"
+      },
+      "displayName": {
+        "en": "Nahida",
+        "zh": "纳西妲"
+      },
+      "profession": {
+        "en": "Deep Grilling & Spec Architect",
+        "zh": "深度审讯与架构Spec专家"
+      },
+      "avatar": "avatars/domain-grilling-architect.png",
+      "role": "member"
+    },
+    {
+      "id": "deep-module-tdd-engineer",
+      "name": {
+        "en": "Klee",
+        "zh": "可莉"
+      },
+      "displayName": {
+        "en": "Klee",
+        "zh": "可莉"
+      },
+      "profession": {
+        "en": "TDD, Runtime QA & Docx Builder",
+        "zh": "TDD研发、运行时QA与报告构建专家"
+      },
+      "avatar": "avatars/deep-module-tdd-engineer.png",
+      "role": "member"
+    },
+    {
+      "id": "impeccable-design-director",
+      "name": {
+        "en": "Kokomi",
+        "zh": "心海"
+      },
+      "displayName": {
+        "en": "Kokomi",
+        "zh": "心海"
+      },
+      "profession": {
+        "en": "Frontend-Design & Modern Web Director",
+        "zh": "前端审美与现代Web总监"
+      },
+      "avatar": "avatars/impeccable-design-director.png",
+      "role": "member"
+    },
+    {
+      "id": "ponytail-simplicity-gatekeeper",
+      "name": {
+        "en": "Sigewinne",
+        "zh": "希格雯"
+      },
+      "displayName": {
+        "en": "Sigewinne",
+        "zh": "希格雯"
+      },
+      "profession": {
+        "en": "Single-Pass Diff & Sanitization Gatekeeper",
+        "zh": "单轮差分终审与脱敏守门员"
+      },
+      "avatar": "avatars/ponytail-simplicity-gatekeeper.png",
+      "role": "member"
+    },
+    {
+      "id": "scrapling-web-intelligence",
+      "name": {
+        "en": "Sayu",
+        "zh": "早柚"
+      },
+      "displayName": {
+        "en": "Sayu",
+        "zh": "早柚"
+      },
+      "profession": {
+        "en": "Trellis-Research & Agent-Browser Specialist",
+        "zh": "拟人浏览与资料情报专家"
+      },
+      "avatar": "avatars/scrapling-web-intelligence.png",
+      "role": "member"
+    }
+  ]
+}
